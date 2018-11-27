@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Dice Game</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/dice.css">
+		<script src="js/dice.js"></script>
+	</head>
+	<body>
+		<div class="popuptext hiderules">
+			<h1>Dice Game</h1>   
+			<ul>
+				<li>1. Roll 2 dice. </li>
+				<li>2. Make a rectangle with the sides generated</li>
+				<li>3. The rectangle must be connected to your existing territory.</li>
+				<li>4. The first players first rectangle is placed in a corner. The second players first rectangle in the opposing corner.</li>
+				<li>5. If you cannot make the rectangle generated you skip your turn.</li>
+				<li>6. When all space is filled you end the game.</li>
+				<li>7. The one with the most territory wins.</li>
+			</ul>
+			<button class="btn-close">I understand, let's play!</button>
+		</div>
+		<div class="main-board">
+			<canvas id="canvas" width="1080" height="560">Canvas not supported</canvas>
+		</div>
+		<div class="right-buttons">
+			<button class="btn-rules">Rules</button>
+			<div class="dice1">
+				<div class="cube cube0 animation-1">
+				<div class="cube_face_1">&bull;</div>
+				<div class="cube_face_2">&bull;&ensp;&ensp;&bull;</div>
+				<div class="cube_face_3">&emsp;&emsp;&bull;<br>&ensp;&ensp;&bull;<br>&bull;</div>
+				<div class="cube_face_4">&bull;&ensp;&emsp;&bull;<br><br>&bull;&ensp;&emsp;&bull;</div>
+				<div class="cube_face_5">&bull;&ensp;&emsp;&bull;<br>&emsp;&bull;<br>&bull;&ensp;&emsp;&bull;</div>
+				<div class="cube_face_6">&bull;&ensp;&emsp;&bull;<br>&bull;&ensp;&emsp;&bull;<br>&bull;&ensp;&emsp;&bull;</div>
+			</div>
+			<div class="dice2">
+				<div class="cube cube1 animation-1">
+				<div class="cube_face_1">&bull;</div>
+				<div class="cube_face_2">&bull;&ensp;&ensp;&bull;</div>
+				<div class="cube_face_3">&emsp;&emsp;&bull;<br>&ensp;&ensp;&bull;<br>&bull;</div>
+				<div class="cube_face_4">&bull;&ensp;&emsp;&bull;<br><br>&bull;&ensp;&emsp;&bull;</div>
+				<div class="cube_face_5">&bull;&ensp;&emsp;&bull;<br>&emsp;&bull;<br>&bull;&ensp;&emsp;&bull;</div>
+				<div class="cube_face_6">&bull;&ensp;&emsp;&bull;<br>&bull;&ensp;&emsp;&bull;<br>&bull;&ensp;&emsp;&bull;</div>
+			</div>
+			</div>
+			<div class="grid-container">
+				<div class="player-0-panel active">
+					<div class="player-name" id="name-0">Player 1</div>
+					<div class="player-score" id="score-0">0</div>
+					<div class="player-controls">
+							<button class="btn-roll"><i class="fas fa-dice"></i>Roll</button><br />
+							<button class="btn-hold"><i class="fas fa-hand-holding"></i>Pass</button>
+							<button class="btn-giveup"><i class="fas fa-times"></i>Giveup</button>
+					</div>
+				</div>
+				<div class="player-1-panel">
+					<div class="player-name" id="name-1">Player 2</div>
+					<div class="player-score" id="score-1">0</div>
+					<div class="player-controls">
+						<button class="btn-roll"><i class="fas fa-dice"></i>Roll</button><br />
+						<button class="btn-hold"><i class="fas fa-hand-holding"></i>Pass</button>
+						<button class="btn-giveup"><i class="fas fa-times"></i>Giveup</button>
+					</div>
+				</div>
+		</div>
+	</body>
+</html>
